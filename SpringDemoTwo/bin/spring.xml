@@ -1,0 +1,65 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+     
+     <!--Constructor injecting
+     
+     <bean id = "mob" class ="com.cg.speingdemotwo.service.Mobile">
+     <constructor-arg index ="1" value="Vivo V9 Youth"></constructor-arg>
+     <constructor-arg index = "0" value = " 1001"></constructor-arg>
+     <constructor-arg index = "2" value = " 23000"></constructor-arg>
+     
+     -->
+     <!-- Object Injecting -->
+     
+     
+     
+      <bean id ="mob" class ="com.cg.speingdemotwo.service.Mobile">
+      
+      <property name = "mobileId" value = "1001"></property>
+      <property name = "mobileName" value = "Iphone10s"></property>
+      <property name = "mobPrice" value = "7000.0"></property>
+      <property name = "invent">
+      <list>
+      <ref bean = "one"></ref>
+      <ref bean = "two"></ref>
+      <ref bean = "three"></ref>
+      </list> 
+      </property>
+      
+      </bean>
+      
+      
+      
+       <!-- object bean 
+        <bean id = "inv" class ="com.cg.speingdemotwo.service.Inventory">
+        <property name = "mobileCount" value = "10"></property>
+        <property name = "mobileCompany" value = "Apple"></property>
+     
+     </bean>
+     -->
+     
+     
+     
+     
+     
+     <bean id = "one" class ="com.cg.speingdemotwo.service.Inventory">
+        <property name = "mobileCount" value = "10"></property>
+        <property name = "mobileCompany" value = "Apple"></property>
+     </bean>
+     
+     <bean id = "two" class ="com.cg.speingdemotwo.service.Inventory">
+        <property name = "mobileCount" value = "20"></property>
+        <property name = "mobileCompany" value = "Vivo"></property>
+     
+     </bean>
+     
+     <bean id = "three" class ="com.cg.speingdemotwo.service.Inventory">
+        <property name = "mobileCount" value = "30"></property>
+        <property name = "mobileCompany" value = "Samsung"></property>
+     </bean>
+     
+</beans>
